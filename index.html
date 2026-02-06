@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blender Project Roulette</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Presentation Roulette</h1>
+        <p>Pick a student, then pick their Blender challenge!</p>
+    </header>
+
+    <main class="container">
+        <section class="wheel-box">
+            <div class="controls">
+                <label for="list1">Students:</label>
+                <textarea id="list1" placeholder="Names (comma separated)">Alex, Sam, Jordan, Taylor, Riley</textarea>
+                <button class="update-btn" onclick="updateWheel(1)">Update List</button>
+            </div>
+            <div class="pointer"></div>
+            <canvas id="canvas1" width="400" height="400"></canvas>
+            <div id="result1" class="result">Waiting...</div>
+            <button class="spin-btn" onclick="spin(1)">Spin Student Wheel</button>
+        </section>
+
+        <section class="wheel-box">
+            <div class="controls">
+                <label for="list2">3D Objects:</label>
+                <textarea id="list2" placeholder="Objects (comma separated)">Low-poly Tree, Sci-fi Crate, Coffee Mug, Robot Arm, Sword</textarea>
+                <button class="update-btn" onclick="updateWheel(2)">Update List</button>
+            </div>
+            <div class="pointer"></div>
+            <canvas id="canvas2" width="400" height="400"></canvas>
+            <div id="result2" class="result">Waiting...</div>
+            <button class="spin-btn" onclick="spin(2)">Spin Object Wheel</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
